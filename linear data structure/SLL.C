@@ -1,3 +1,5 @@
+//Singly linked list
+
 #include<stdio.h>
 #include<conio.h>
 struct node
