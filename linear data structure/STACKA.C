@@ -1,3 +1,5 @@
+//Stack using array implementation
+
 #include<stdio.h>
 #include<conio.h>
 #define size 50
