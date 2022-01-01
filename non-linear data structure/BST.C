@@ -152,7 +152,7 @@ void main()
 			case 2:
 				printf("Enter the item: ");
 				scanf("%d",&item);
-				tree=insert(tree,item);
+				tree=del(tree,item);
 				break;
 			case 3:
 				printf("Enter the item: ");
