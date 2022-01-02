@@ -50,6 +50,52 @@ void dfs(int s,int n)
 		if(visited[i]==0)
 			dfs(i,n);
 }
+void enqueue(int item)
+{
+	if(rear==-1)
+		front++;
+	rear++;
+	item=value[item];
+	queue[rear]=item;
+}
+int dequeue()
+{
+	int item;
+	if(front==-1)
+		item=-1;
+	else
+	{
+		item=queue[front];
+		front--;
+	}
+	return(item);
+}
+void bfs(int s,int n)
+{
+	int i,k,x=0;
+	enqueue(s);
+	visited[s]=1;
+	k=dequeue();
+	if(k!=-1)
+		printf("%d ",k);
+	while(k!=-1)
+	{
+		for(i=0;i<n;i++)
+		{
+			if((adjmatrix[x][i]!=0)&&visited[i]==0)
+			{
+				enqueue(i);
+				visited[i]=1;
+			}
+			k=dequeue();
+			if(k!=-1)
+				printf("%d ",k);
+		}
+	}
+	for(i=0;i<n;i++)
+		if(visited[i]==0)
+			bfs(i,n);
+}
 void graph_representation(int n)
 {
 	int i,j;
@@ -88,5 +134,9 @@ void main()
 	graph_representation(n);
 	printf("\nDfs: ");
 	dfs(0,n);
+	for(i=0;i<n;i++)
+		visited[i]=0;
+	printf("\nBfs: ");
+	bfs(0,n);
 	getch();
 }
