@@ -34,7 +34,7 @@ void dequeue()
 		printf("Queue underflow\n");
 	else
 	{
-		if(front==size-1)
+		if(front==size-1||rear==0)
 		{
 			item=arr[front];
 			front=-1;
