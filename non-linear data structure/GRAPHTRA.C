@@ -66,7 +66,13 @@ int dequeue()
 	else
 	{
 		item=queue[front];
-		front--;
+		if(front==0)
+		{
+		    front=-1;
+		    rear=-1;
+		}
+		else
+		    front++;
 	}
 	return(item);
 }
