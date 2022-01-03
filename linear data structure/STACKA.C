@@ -65,7 +65,7 @@ void main()
 				display();
 				break;
 			default:
-				printf("Wron choice!!\n");
+				printf("Wrong choice!!\n");
 		}
 		printf("Do you want to continue?<0/1>: ");
 		scanf("%d",&ch);
