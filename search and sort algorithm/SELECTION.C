@@ -1,3 +1,5 @@
+//Selection sort
+
 #include<stdio.h>
 #include<conio.h>
 int arr[50],n;
