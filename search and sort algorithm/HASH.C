@@ -16,14 +16,13 @@ void insert()
 	{
 		index=hash(temp);
 		if(a[index]!=-1)
-			temp=item+i+1;
+			temp=item+i+1;//linear probing
+			//temp=item+(i*i);//quadratic probing
 		else
 		{
 			a[index]=item;
 			c=1;
 			break;
-
-
 		}
 	}
 	if(c==1)
